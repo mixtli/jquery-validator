@@ -11,11 +11,11 @@ Supported validations include:
  * Excludes
  * Length
  * Confirmation
-
+ * Acceptance
   
 == Usage
 
-  % rails generate jquery_validator
+  % rails generate jquery_validator:install
   = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
   = javascript_include_tag "http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"
   = javascript_include_tag "jquery_validator"
