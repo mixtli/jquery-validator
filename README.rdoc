@@ -28,7 +28,7 @@ Supported validations include:
   end
 
   <%= form_for(@user) do |f| %>
-    <%=f.jquery_validations %>
+    <%=f.jquery_validators %>
     Login: <%= f.text_field :login %><br/>
     Password: <%= f.password_field :password %><br/>
     Confirm: <%= f.password_field :password_confirmation %><br/>
@@ -43,7 +43,7 @@ You can pass a :fields argument to jquery_validations to only validate certain f
   <%= f.jquery_validators :fields => [:login, :email], :debug => true, :submitHandler => "function() { alert('Thank you!'); }" %>
 
 If you want to be more unobtrusive, add
-
+    
   yield :javascripts
 
 to the head section of your application.html.erb and surround your jquery_validators call with content_for like so:
