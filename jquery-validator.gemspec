@@ -23,7 +23,12 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "jquery-validator.gemspec",
+     "lib/generators/jquery_validator/install/jquery_validator_generator.rb",
+     "lib/generators/jquery_validator/install/templates/jquery_validator.js",
      "lib/jquery-validator.rb",
+     "lib/jquery_validator/base.rb",
+     "lib/jquery_validator/form_builder.rb",
      "spec/jquery-validator_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"

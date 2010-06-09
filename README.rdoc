@@ -1,6 +1,47 @@
 = jquery-validator
 
-Description goes here.
+Rails plugin to generate jquery validations based on model validations.  Use this plugin to keep your validations DRY. 
+This plugin requires Rails 3, Jquery, and the Jquery validation plugin.
+
+Supported validations include:
+ * Presence
+ * Format
+ * Numericality
+ * Includes
+ * Excludes
+ * Length
+ * Confirmation
+
+  
+== Usage
+
+  % rails generate jquery_validator
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"
+  = javascript_include_tag "http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"
+  = javascript_include_tag "jquery_validator"
+
+  class User < ActiveRecord::Base
+    validate :login, :presence => true, :length => {:minimum => 3, :maximum => 10}
+    validate :email, :presence => true
+    validate :password, :presence => true, :confirmation => true, :length => {:minimum => 8}
+    validates_acceptance_of :eula
+  end
+
+  <%= form_for(@user) do |f| %>
+    <%=f.jquery_validations %>
+    Login: <%= f.text_field :login %><br/>
+    Password: <%= f.password_field :password %><br/>
+    Confirm: <%= f.password_field :password_confirmation %><br/>
+    Accept Terms <%= f.checkbox :eula %>
+    <%= f.submit %>
+  <% end %>
+
+== Options
+  
+You can pass a :fields argument to jquery_validations to only validate certain fields.  All other options are converted to JSON and passed directly to the jquery validate() method.  You can pass javascript functions as strings.  For example
+  
+  <%= f.jquery_validators :fields => [:login, :email], :debug => true, :submitHandler => "function() { alert('Thank you!'); }" %>
+
 
 == Note on Patches/Pull Requests
  
