@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
      "jquery-validator.gemspec",
      "lib/generators/jquery_validator/install/jquery_validator_generator.rb",
      "lib/generators/jquery_validator/install/templates/jquery_validator.js",
-     "lib/jquery_validator.rb",
+     "lib/jquery-validator.rb",
      "lib/jquery_validator/base.rb",
      "lib/jquery_validator/form_builder.rb",
      "spec/jquery-validator_spec.rb",

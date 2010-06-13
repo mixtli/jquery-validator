@@ -1,4 +1,3 @@
-
 module ActionView
   module Helpers
     class FormBuilder

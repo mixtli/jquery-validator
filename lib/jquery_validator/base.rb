@@ -1,5 +1,3 @@
-require 'rails/generators'
-require 'form_builder_extensions'
 module JqueryValidator
   class Base
     def initialize(builder, validator)
