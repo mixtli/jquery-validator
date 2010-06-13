@@ -38,9 +38,9 @@ Supported validations include:
 
 == Options
   
-You can pass a :fields argument to jquery_validations to only validate certain fields.  All other options are converted to JSON and passed directly to the jquery validate() method.  You can pass javascript functions as strings.  For example
+You can pass a :only argument to jquery_validations to only validate certain fields.  All other options are converted to JSON and passed directly to the jquery validate() method.  You can pass javascript functions as strings.  For example
   
-  <%= f.jquery_validators :fields => [:login, :email], :debug => true, :submitHandler => "function() { alert('Thank you!'); }" %>
+  <%= f.jquery_validators :only => [:login, :email], :debug => true, :submitHandler => "function() { alert('Thank you!'); }" %>
 
 If you want to be more unobtrusive, add
     

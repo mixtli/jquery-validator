@@ -2,11 +2,9 @@ module ActionView
   module Helpers
     class FormBuilder
       def jquery_validators(options = {})
-          fields = options.delete(:fields)
+          fields = options.delete(:only)
           
-          Rails.logger.debug @object.class.validators.map(&:attributes)
           @object.class.validators.each do |v|
-            Rails.logger.debug "doing validator #{v}"
             if !fields || fields.include?(v.attributes.first)
               if validator = JqueryValidator.factory(v, self)
                 options.deep_merge!(JqueryValidator.factory(v, self).validate_arguments)
