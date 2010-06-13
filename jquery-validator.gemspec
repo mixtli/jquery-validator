@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["mixtli"]
-  s.date = %q{2010-06-09}
+  s.date = %q{2010-06-12}
   s.description = %q{Uses the model validation logic you have already defined to generate javascript validation using jquery}
   s.email = %q{ronmcclain75@gmail.com}
   s.extra_rdoc_files = [
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
      "lib/generators/jquery_validator/install/jquery_validator_generator.rb",
      "lib/generators/jquery_validator/install/templates/jquery_validator.js",
      "lib/jquery-validator.rb",
+     "lib/jquery_validator.rb",
      "lib/jquery_validator/base.rb",
      "lib/jquery_validator/form_builder.rb",
      "spec/jquery-validator_spec.rb",
