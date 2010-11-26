@@ -3,6 +3,7 @@ require 'rake'
 
 begin
   require 'jeweler'
+#  require 'jruby-openssl'
   Jeweler::Tasks.new do |gem|
     gem.name = "jquery-validator"
     gem.summary = %Q{DRY up your rails validations with jquery}
